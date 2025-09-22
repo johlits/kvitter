@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --bg: #0f1419;
+  --card: #15202b;
+  --text: #e6e6e6;
+  --muted: #93a3b3;
+  --primary: #1d9bf0;
+  --border: #22303c;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; }
+body { background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+.container { max-width: 760px; margin: 0 auto; padding: 16px; }
+header { display: flex; align-items: baseline; gap: 12px; margin: 8px 0 16px; }
+h1 { font-size: 28px; margin: 0; }
+.subtitle { color: var(--muted); }
+
+.controls { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: end; margin-bottom: 12px; }
+.user-select label { display: block; color: var(--muted); margin-bottom: 6px; }
+.user-select select { width: 100%; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 10px; }
+
+.create-user { display: flex; gap: 8px; }
+.create-user input { background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 10px; }
+.create-user button { background: var(--primary); border: none; color: white; border-radius: 999px; padding: 10px 16px; cursor: pointer; }
+
+.composer form { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 12px; }
+.composer textarea { width: 100%; min-height: 80px; background: transparent; color: var(--text); border: none; resize: vertical; outline: none; font-size: 16px; }
+.composer-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+.composer-actions span { color: var(--muted); }
+.composer-actions button { background: var(--primary); border: none; color: white; border-radius: 999px; padding: 10px 16px; cursor: pointer; }
+
+.timeline { display: grid; gap: 8px; margin-top: 16px; }
+.tweet { display: grid; grid-template-columns: 44px 1fr; gap: 12px; background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 12px; }
+.avatar { width: 44px; height: 44px; border-radius: 50%; background: #0a84ff22; display: grid; place-items: center; font-weight: 600; color: var(--primary); }
+.tweet-meta { display: flex; gap: 8px; align-items: baseline; }
+.tweet-meta .name { font-weight: 600; }
+.tweet-meta .handle, .tweet-meta .time { color: var(--muted); font-size: 12px; }
+.tweet-text { white-space: pre-wrap; line-height: 1.4; }
+
+footer { color: var(--muted); margin: 24px 0; }
+footer a { color: var(--muted); }
+
+.error { color: #ff8080; }
+.empty { color: var(--muted); text-align: center; padding: 24px; }
